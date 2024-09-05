@@ -598,7 +598,7 @@
 																</li>
 																<li id="menu-item-734"
 																	class="menu-item menu-item-type-custom menu-item-object-custom parent hfe-creative-menu">
-																	<a href="news/" class="hfe-menu-item">News</a>
+																	<a href="#" class="hfe-menu-item">News</a>
 																</li>
 															</ul>
 														</nav>
@@ -686,13 +686,13 @@
 														</li>
 														<li id="menu-item-734"
 															class="menu-item menu-item-type-custom menu-item-object-custom parent hfe-creative-menu">
-															<a href="news/" class="hfe-menu-item">
+															<a href="#" class="hfe-menu-item">
 																News
 															</a>
 														</li>
 														<li id="menu-item-734"
 															class="menu-item menu-item-type-custom menu-item-object-custom parent hfe-creative-menu">
-															<a href="live-threat-attack/" class="hfe-menu-item">Live Threat
+															<a href="#" class="hfe-menu-item">Live Threat
 																Attack</a>
 														</li>
 													</ul>
@@ -710,7 +710,7 @@
 											<div class="elementor-widget-container">
 												<div class="elementor-button-wrapper">
 													<a class="elementor-button elementor-button-link elementor-size-sm"
-														href="live-threat-attack/">
+														href="#">
 														<span class="elementor-button-content-wrapper">
 															<span class="elementor-button-text">Live Threat
 																Attack</span>
@@ -851,414 +851,85 @@
 							</div>
 						</div>
 					</div>
+					<style>
+						.stack {
+							display: grid;
+							grid-template-columns: 1fr;
+						}
+
+						.stack h1 {
+							grid-row-start: 1;
+							grid-column-start: 1;
+							--stack-height: calc(100% / var(--stacks) - 1px);
+							--inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
+							--clip-top: calc(var(--stack-height) * var(--index));
+							--clip-bottom: calc(var(--stack-height) * var(--inverse-index));
+							clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
+							animation: stack 340ms cubic-bezier(.46, .29, 0, 1.24) 1 backwards calc(var(--index) * 120ms), glitch 1s ease infinite 2s alternate-reverse;
+						}
+
+						.stack span:nth-child(odd) {
+							--glitch-translate: 8px;
+						}
+
+						.stack span:nth-child(even) {
+							--glitch-translate: -8px;
+						}
+
+						@keyframes stack {
+							0% {
+								opacity: 0;
+								transform: translateX(-50%);
+								text-shadow: -4px 6px 0 red, 4px -6px 0 blue;
+							}
+
+							60% {
+								opacity: 0.5;
+								transform: translateX(50%);
+							}
+
+							80% {
+								transform: none;
+								opacity: 1;
+								text-shadow: 4px -6px 0 red, -4px 6px 0 blue;
+							}
+
+							100% {
+								text-shadow: none;
+							}
+						}
+
+						@keyframes glitch {
+							0% {
+								text-shadow: -4px 6px 0 red, 4px -6px 0 blue;
+								transform: translate(var(--glitch-translate));
+							}
+
+							2% {
+								text-shadow: 4px -6px 0 red, -4px 6px 0 blue;
+							}
+
+							4%,
+							100% {
+								text-shadow: none;
+								transform: none;
+							}
+						}
+					</style>
 					<div class="elementor-element elementor-element-f801a0e animated-slow elementor-invisible elementor-widget elementor-widget-heading"
 						data-id="f801a0e" data-element_type="widget"
 						data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_delay&quot;:800}"
 						data-widget_type="heading.default">
-						<div class="elementor-widget-container overflow-hidden">
-							<h1 class="elementor-heading-title elementor-size-default  hero glitch layers"
-								data-text="CYBER WORLD">CYBER WORLD</h1>
+						<div class="elementor-widget-container stack" style="--stacks: 3;">
+							<!-- <h1 class="elementor-heading-title elementor-size-default">CYBER WORLD</h1> -->
+
+							<h1 class="elementor-heading-title elementor-size-default" style="--index: 0;">CYBER
+								WORLD</h1>
+							<h1 class="elementor-heading-title elementor-size-default" style="--index: 1;">CYBER
+								WORLD</h1>
+							<h1 class="elementor-heading-title elementor-size-default" style="--index: 2;">CYBER
+								WORLD</h1>
 						</div>
-						<style>
-							.overflow-hidden {
-								overflow: hidden;
-							}
-
-
-							.hero {
-								font-size: clamp(40px, 10vw, 100px);
-								line-height: 1;
-								display: inline-block;
-								color: #fff;
-								z-index: 2;
-								letter-spacing: 10px;
-
-								/* Bright things in dark environments usually cast that light, giving off a glow */
-								filter: drop-shadow(0 1px 1px);
-							}
-
-
-
-							.layers {
-								position: relative;
-							}
-
-							.layers::before,
-							.layers::after {
-								content: attr(data-text);
-								position: absolute;
-								width: 110%;
-								z-index: -1;
-							}
-
-							.layers::before {
-								top: 10px;
-								left: 15px;
-								color: #00defc;
-							}
-
-							.layers::after {
-								top: 5px;
-								left: -10px;
-								color: #1bc7fb;
-							}
-
-
-
-							@keyframes paths {
-								0% {
-									clip-path: polygon(0% 43%,
-											83% 43%,
-											83% 22%,
-											23% 22%,
-											23% 24%,
-											91% 24%,
-											91% 26%,
-											18% 26%,
-											18% 83%,
-											29% 83%,
-											29% 17%,
-											41% 17%,
-											41% 39%,
-											18% 39%,
-											18% 82%,
-											54% 82%,
-											54% 88%,
-											19% 88%,
-											19% 4%,
-											39% 4%,
-											39% 14%,
-											76% 14%,
-											76% 52%,
-											23% 52%,
-											23% 35%,
-											19% 35%,
-											19% 8%,
-											36% 8%,
-											36% 31%,
-											73% 31%,
-											73% 16%,
-											1% 16%,
-											1% 56%,
-											50% 56%,
-											50% 8%);
-								}
-
-								5% {
-									clip-path: polygon(0% 29%,
-											44% 29%,
-											44% 83%,
-											94% 83%,
-											94% 56%,
-											11% 56%,
-											11% 64%,
-											94% 64%,
-											94% 70%,
-											88% 70%,
-											88% 32%,
-											18% 32%,
-											18% 96%,
-											10% 96%,
-											10% 62%,
-											9% 62%,
-											9% 84%,
-											68% 84%,
-											68% 50%,
-											52% 50%,
-											52% 55%,
-											35% 55%,
-											35% 87%,
-											25% 87%,
-											25% 39%,
-											15% 39%,
-											15% 88%,
-											52% 88%);
-								}
-
-								30% {
-									clip-path: polygon(0% 53%,
-											93% 53%,
-											93% 62%,
-											68% 62%,
-											68% 37%,
-											97% 37%,
-											97% 89%,
-											13% 89%,
-											13% 45%,
-											51% 45%,
-											51% 88%,
-											17% 88%,
-											17% 54%,
-											81% 54%,
-											81% 75%,
-											79% 75%,
-											79% 76%,
-											38% 76%,
-											38% 28%,
-											61% 28%,
-											61% 12%,
-											55% 12%,
-											55% 62%,
-											68% 62%,
-											68% 51%,
-											0% 51%,
-											0% 92%,
-											63% 92%,
-											63% 4%,
-											65% 4%);
-								}
-
-								45% {
-									clip-path: polygon(0% 33%,
-											2% 33%,
-											2% 69%,
-											58% 69%,
-											58% 94%,
-											55% 94%,
-											55% 25%,
-											33% 25%,
-											33% 85%,
-											16% 85%,
-											16% 19%,
-											5% 19%,
-											5% 20%,
-											79% 20%,
-											79% 96%,
-											93% 96%,
-											93% 50%,
-											5% 50%,
-											5% 74%,
-											55% 74%,
-											55% 57%,
-											96% 57%,
-											96% 59%,
-											87% 59%,
-											87% 65%,
-											82% 65%,
-											82% 39%,
-											63% 39%,
-											63% 92%,
-											4% 92%,
-											4% 36%,
-											24% 36%,
-											24% 70%,
-											1% 70%,
-											1% 43%,
-											15% 43%,
-											15% 28%,
-											23% 28%,
-											23% 71%,
-											90% 71%,
-											90% 86%,
-											97% 86%,
-											97% 1%,
-											60% 1%,
-											60% 67%,
-											71% 67%,
-											71% 91%,
-											17% 91%,
-											17% 14%,
-											39% 14%,
-											39% 30%,
-											58% 30%,
-											58% 11%,
-											52% 11%,
-											52% 83%,
-											68% 83%);
-								}
-
-								76% {
-									clip-path: polygon(0% 26%,
-											15% 26%,
-											15% 73%,
-											72% 73%,
-											72% 70%,
-											77% 70%,
-											77% 75%,
-											8% 75%,
-											8% 42%,
-											4% 42%,
-											4% 61%,
-											17% 61%,
-											17% 12%,
-											26% 12%,
-											26% 63%,
-											73% 63%,
-											73% 43%,
-											90% 43%,
-											90% 67%,
-											50% 67%,
-											50% 41%,
-											42% 41%,
-											42% 46%,
-											50% 46%,
-											50% 84%,
-											96% 84%,
-											96% 78%,
-											49% 78%,
-											49% 25%,
-											63% 25%,
-											63% 14%);
-								}
-
-								90% {
-									clip-path: polygon(0% 41%,
-											13% 41%,
-											13% 6%,
-											87% 6%,
-											87% 93%,
-											10% 93%,
-											10% 13%,
-											89% 13%,
-											89% 6%,
-											3% 6%,
-											3% 8%,
-											16% 8%,
-											16% 79%,
-											0% 79%,
-											0% 99%,
-											92% 99%,
-											92% 90%,
-											5% 90%,
-											5% 60%,
-											0% 60%,
-											0% 48%,
-											89% 48%,
-											89% 13%,
-											80% 13%,
-											80% 43%,
-											95% 43%,
-											95% 19%,
-											80% 19%,
-											80% 85%,
-											38% 85%,
-											38% 62%);
-								}
-
-								1%,
-								7%,
-								33%,
-								47%,
-								78%,
-								93% {
-									clip-path: none;
-								}
-							}
-
-
-
-							@keyframes movement {
-								0% {
-									top: 0px;
-									left: -20px;
-								}
-
-								15% {
-									top: 10px;
-									left: 10px;
-								}
-
-								60% {
-									top: 5px;
-									left: -10px;
-								}
-
-								75% {
-									top: -5px;
-									left: 20px;
-								}
-
-								100% {
-									top: 10px;
-									left: 5px;
-								}
-							}
-
-
-
-							@keyframes opacity {
-								0% {
-									opacity: 0.1;
-								}
-
-								5% {
-									opacity: 0.7;
-								}
-
-								30% {
-									opacity: 0.4;
-								}
-
-								45% {
-									opacity: 0.6;
-								}
-
-								76% {
-									opacity: 0.4;
-								}
-
-								90% {
-									opacity: 0.8;
-								}
-
-								1%,
-								7%,
-								33%,
-								47%,
-								78%,
-								93% {
-									opacity: 0;
-								}
-							}
-
-
-
-							@keyframes font {
-								0% {
-									font-weight: 100;
-									color: #00defc;
-									filter: blur(3px);
-								}
-
-								20% {
-									font-weight: 500;
-									color: #fff;
-									filter: blur(0);
-								}
-
-								50% {
-									font-weight: 300;
-									color: #1bc7fb;
-									filter: blur(2px);
-								}
-
-								60% {
-									font-weight: 700;
-									color: #fff;
-									filter: blur(0);
-								}
-
-								90% {
-									font-weight: 500;
-									color: #00defc;
-									filter: blur(6px);
-								}
-							}
-
-							.glitch span {
-								animation: paths 5s step-end infinite;
-							}
-
-							.glitch::before {
-								animation: paths 5s step-end infinite, opacity 5s step-end infinite,
-									font 8s step-end infinite, movement 10s step-end infinite;
-							}
-
-							.glitch::after {
-								animation: paths 5s step-end infinite, opacity 5s step-end infinite,
-									font 7s step-end infinite, movement 8s step-end infinite;
-							}
-						</style>
 					</div>
 				</div>
 			</div>
@@ -1302,10 +973,6 @@
 												width: 8dvh;
 											}
 										}
-
-										.skyblue-color {
-											color: #00defc;
-										}
 									</style>
 									<div class="elementor-image-carousel-wrapper swiper" dir="ltr">
 										<div class="elementor-image-carousel swiper-wrapper" aria-live="off">
@@ -1315,16 +982,14 @@
 												<figure class="swiper-slide-inner"><img decoding="async"
 														class="swiper-slide-image client-marquee-img"
 														src="wp-content/uploads/sites/256/2024/07/clients/bank.png"
-														alt="Logo 1 1" /></figure> <span class="skyblue-color">
-													BANKING</span>
+														alt="Logo 1 1" /></figure> BANKING
 											</div>
 											<div class="swiper-slide" role="group" aria-roledescription="slide"
 												aria-label="1 of 4">
 												<figure class="swiper-slide-inner"><img decoding="async"
 														class="swiper-slide-image client-marquee-img"
 														src="wp-content/uploads/sites/256/2024/07/clients/government.png"
-														alt="Logo 3 3" /></figure> <span class="skyblue-color">
-													GOVERNMENT</span>
+														alt="Logo 3 3" /></figure> GOVERNMENT
 											</div>
 
 											<div class="swiper-slide" role="group" aria-roledescription="slide"
@@ -1332,24 +997,21 @@
 												<figure class="swiper-slide-inner"><img decoding="async"
 														class="swiper-slide-image client-marquee-img"
 														src="wp-content/uploads/sites/256/2024/07/clients/school.png"
-														alt="Logo 4 4" /></figure> <span class="skyblue-color">
-													EDUCATION</span>
+														alt="Logo 4 4" /></figure> EDUCATION
 											</div>
 											<div class="swiper-slide" role="group" aria-roledescription="slide"
 												aria-label="4 of 4">
 												<figure class="swiper-slide-inner"><img decoding="async"
 														class="swiper-slide-image client-marquee-img"
 														src="wp-content/uploads/sites/256/2024/07/clients/digital-money.png"
-														alt="Logo 4 4" /></figure> <span class="skyblue-color"> FIN
-													TECH</span>
+														alt="Logo 4 4" /></figure> FIN TECH
 											</div>
 											<div class="swiper-slide" role="group" aria-roledescription="slide"
 												aria-label="2 of 4">
 												<figure class="swiper-slide-inner"><img decoding="async"
 														class="swiper-slide-image client-marquee-img"
 														src="wp-content/uploads/sites/256/2024/07/clients/insurance.png"
-														alt="Logo 2 2" /></figure> <span class="skyblue-color">
-													INSURANCE</span>
+														alt="Logo 2 2" /></figure> INSURANCE
 
 											</div>
 											<div class="swiper-slide" role="group" aria-roledescription="slide"
@@ -1357,16 +1019,14 @@
 												<figure class="swiper-slide-inner"><img decoding="async"
 														class="swiper-slide-image client-marquee-img"
 														src="wp-content/uploads/sites/256/2024/07/clients/internet.png"
-														alt="Logo 4 4" /></figure> <span class="skyblue-color"> WEB2 /
-													WEB3 </span>
+														alt="Logo 4 4" /></figure> WEB2 / WEB3
 											</div>
 											<div class="swiper-slide" role="group" aria-roledescription="slide"
 												aria-label="4 of 4">
 												<figure class="swiper-slide-inner"><img decoding="async"
 														class="swiper-slide-image client-marquee-img"
 														src="wp-content/uploads/sites/256/2024/07/clients/office-building.png"
-														alt="Logo 4 4" /></figure> <span class="skyblue-color"> TECH
-													COMPANY</span>
+														alt="Logo 4 4" /></figure> TECH COMPANY
 											</div>
 										</div>
 
@@ -2366,6 +2026,7 @@
 							</div>
 						</div>
 					</div>
+					
 					<style>
 						.items {
 							position: relative;
@@ -2680,6 +2341,8 @@
 
 					</div>
 					<!-- service cards ends here  -->
+
+
 
 				</div>
 			</div>
@@ -3378,11 +3041,6 @@
 			.elementor-icon-list-item {
 				list-style-type: none;
 			}
-                        .svg-icon{
-                          width: 0.8em !important;
-                          height: 0.8em  !important;
-                          /* padding: 10%; */
-                        }
 		</style>
 
 		<footer itemtype="https://schema.org/WPFooter" itemscope="itemscope" id="colophon" role="contentinfo">
@@ -3434,11 +3092,7 @@
 																	data-stop-vertical-effect=""></div>
 
 
-																<!----------------------------- 
-			* controls_data : find the the props passed indie of data attribute
-			* props.SubmitResponseMarkup : contains the markup of error or success message
-			* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
-		--------------------------- -->
+
 
 																<script type="text/mf" class="mf-template">
 			function controls_data (value){
@@ -3666,20 +3320,20 @@
 															<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook elementor-repeater-item-7718da3"
 																target="_blank">
 																<span class="elementor-screen-only">Instagram</span>
-																<i class="svg-icon fa fa-instagram "></i>
+																<i class="fa fa-instagram "></i>
 															</a>
 														</span>
 														<span class="elementor-grid-item">
 															<a class="elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-repeater-item-85b87d2"
 																target="_blank">
 																<span class="elementor-screen-only">Twitter</span>
-																<i class="svg-icon fa fa-twitter "></i> </a>
+																<i class="fa fa-twitter "></i> </a>
 														</span>
 														<span class="elementor-grid-item">
 															<a class="elementor-icon elementor-social-icon elementor-social-icon-youtube elementor-repeater-item-7b61411"
 																target="_blank">
 																<span class="elementor-screen-only">Linkedin</span>
-																<i class="svg-icon fa fa-linkedin "></i></a>
+																<i class="fa fa-linkedin "></i></a>
 														</span>
 													</div>
 												</div>
@@ -3958,7 +3612,7 @@
 		id="elementor-waypoints-js"></script>
 	<script src="wp-includes/js/jquery/ui/core.min3f14.js?ver=1.13.2" id="jquery-ui-core-js"></script>
 	<script id="elementor-frontend-js-before">
-		var elementorFrontendConfig = { "environmentMode": { "edit": false, "wpPreview": false, "isScriptDebug": false }, "i18n": { "shareOnFacebook": "Share on Facebook", "shareOnTwitter": "Share on Twitter", "pinIt": "Pin it", "download": "Download", "downloadImage": "Download image", "fullscreen": "Fullscreen", "zoom": "Zoom", "share": "Share", "playVideo": "Play Video", "previous": "Previous", "next": "Next", "close": "Close", "a11yCarouselWrapperAriaLabel": "Carousel | Horizontal scrolling: Arrow Left & Right", "a11yCarouselPrevSlideMessage": "Previous slide", "a11yCarouselNextSlideMessage": "Next slide", "a11yCarouselFirstSlideMessage": "This is the first slide", "a11yCarouselLastSlideMessage": "This is the last slide", "a11yCarouselPaginationBulletMessage": "Go to slide" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "responsive": { "breakpoints": { "mobile": { "label": "Mobile Portrait", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Landscape", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablet Portrait", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablet Landscape", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Laptop", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "Widescreen", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } } }, "version": "3.21.8", "is_static": false, "experimentalFeatures": { "e_optimized_assets_loading": true, "e_optimized_css_loading": true, "e_font_icon_svg": true, "additional_custom_breakpoints": true, "container": true, "e_swiper_latest": true, "container_grid": true, "hello-theme-header-footer": true, "home_screen": true, "ai-layout": true, "landing-pages": true, "e_lazyload": true }, "urls": { "assets": "" }, "swiperClass": "swiper", "settings": { "page": [], "editorPreferences": [] }, "kit": { "body_background_background": "classic", "active_breakpoints": ["viewport_mobile", "viewport_tablet"], "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description", "hello_header_logo_type": "title", "hello_header_menu_layout": "horizontal", "hello_footer_logo_type": "logo" }, "post": { "id": 8, "title": "Home", "excerpt": "", "featuredImage": "" } };
+		var elementorFrontendConfig = { "environmentMode": { "edit": false, "wpPreview": false, "isScriptDebug": false }, "i18n": { "shareOnFacebook": "Share on Facebook", "shareOnTwitter": "Share on Twitter", "pinIt": "Pin it", "download": "Download", "downloadImage": "Download image", "fullscreen": "Fullscreen", "zoom": "Zoom", "share": "Share", "playVideo": "Play Video", "previous": "Previous", "next": "Next", "close": "Close", "a11yCarouselWrapperAriaLabel": "Carousel | Horizontal scrolling: Arrow Left & Right", "a11yCarouselPrevSlideMessage": "Previous slide", "a11yCarouselNextSlideMessage": "Next slide", "a11yCarouselFirstSlideMessage": "This is the first slide", "a11yCarouselLastSlideMessage": "This is the last slide", "a11yCarouselPaginationBulletMessage": "Go to slide" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "responsive": { "breakpoints": { "mobile": { "label": "Mobile Portrait", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Landscape", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablet Portrait", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablet Landscape", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Laptop", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "Widescreen", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } } }, "version": "3.21.8", "is_static": false, "experimentalFeatures": { "e_optimized_assets_loading": true, "e_optimized_css_loading": true, "e_font_icon_svg": true, "additional_custom_breakpoints": true, "container": true, "e_swiper_latest": true, "container_grid": true, "hello-theme-header-footer": true, "home_screen": true, "ai-layout": true, "landing-pages": true, "e_lazyload": true }, "urls": { "assets": "https:\/\/kitpro.site\/cyberty\/wp-content\/plugins\/elementor\/assets\/" }, "swiperClass": "swiper", "settings": { "page": [], "editorPreferences": [] }, "kit": { "body_background_background": "classic", "active_breakpoints": ["viewport_mobile", "viewport_tablet"], "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description", "hello_header_logo_type": "title", "hello_header_menu_layout": "horizontal", "hello_footer_logo_type": "logo" }, "post": { "id": 8, "title": "Home", "excerpt": "", "featuredImage": "https:\/\/kitpro.site\/cyberty\/wp-content\/uploads\/sites\/256\/2024\/07\/Home-241x1024.jpg" } };
 	</script>
 	<script src="wp-content/plugins/elementor/assets/js/frontend.min3cad.js?ver=3.21.8"
 		id="elementor-frontend-js"></script>
@@ -3980,14 +3634,14 @@
 	<script src="wp-includes/js/dist/escape-html.min3a9d.js?ver=6561a406d2d232a6fbd2" id="wp-escape-html-js"></script>
 	<script src="wp-includes/js/dist/element.min1596.js?ver=cb762d190aebbec25b27" id="wp-element-js"></script>
 	<script id="metform-app-js-extra">
-		var mf = { "postType": "envato_tk_templates", "restURI": "" };
+		var mf = { "postType": "envato_tk_templates", "restURI": "https:\/\/kitpro.site\/cyberty\/wp-json\/metform\/v1\/forms\/views\/" };
 	</script>
 	<script src="wp-content/plugins/metform/public/assets/js/app3b71.js?ver=3.5.0" id="metform-app-js"></script>
 	<script src="wp-content/plugins/elementskit-lite/widgets/init/assets/js/animate-circle.min7c45.js?ver=3.0.6"
 		id="animate-circle-js"></script>
 	<script src="wp-content/plugins/elementskit-lite/widgets/init/assets/js/elementor7c45.js?ver=3.0.6"
 		id="elementskit-elementor-js"></script>
-		<!-- scroll cards script  -->
+	<!-- scroll cards script  -->
 	<script>
 		const slider = document.querySelector('.items');
 		let isDown = false;
