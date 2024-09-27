@@ -1679,7 +1679,12 @@
 				style="background: #050708;">
 				<div class="e-con-inner py-lg-80">
 					<style>
+						.list-thumb-icon {
+								width: 25px;
+								padding-right: 5px;
+							}
 						@media (min-width:760px) {
+							
 							.py-lg-80 {
 								padding-block: 80px !important;
 							}
@@ -1687,11 +1692,14 @@
 							.ps-lg-100 {
 								padding-left: 1%;
 							}
-
-							.list-thumb-icon {
-								width: 25px;
-								padding-right: 5px;
+						}
+						@media (max-width:760px) {
+							.thumb-icon-list li{
+								padding-left: 10%;
 							}
+						}
+
+							
 
 							.thumb-icon-list li {
 								display: flex;
@@ -1716,7 +1724,6 @@
 									transform: translateY(0);
 								}
 							}
-						}
 					</style>
 
 					<!-- <div class="elementor-element elementor-element-6c953d1 e-flex e-con-boxed e-con e-child"
@@ -1749,7 +1756,7 @@
 										data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_delay&quot;:300}"
 										data-widget_type="text-editor.default">
 										<div class="elementor-widget-container">
-											<p>
+											<p class="mobile-hide">
 												Don't rely on a single pentest—secure your business from evolving
 												threats. With SecureYu, ensure continuous, scalable security testing
 												that safeguards your cloud, APIs, web apps, infrastructure, mobile, and
@@ -1762,7 +1769,7 @@
 												<li> <img
 														src="wp-content/uploads/sites/256/2024/07/logos/SecureYu-Thumb.png"
 														alt="list icon secureyu" class="list-thumb-icon"> <span>
-														Delivering Continuous and Scalable Security Testing </span></li>
+														Delivering Continuous <span class="mobile-hide">and Scalable</span> Security Testing </span></li>
 												<li> <img
 														src="wp-content/uploads/sites/256/2024/07/logos/SecureYu-Thumb.png"
 														alt="list icon secureyu" class="list-thumb-icon"> <span> Expect
@@ -1817,7 +1824,7 @@
 					<div class="elementor-element elementor-element-6c953d1 e-flex e-con-boxed e-con e-child"
 						data-id="6c953d1" data-element_type="container">
 
-						<img class="floating-image" style="margin-inline: auto;" width="70%"
+						<img class="floating-image mobile-hide" style="margin-inline: auto;" width="70%"
 							src="wp-content/uploads/sites/256/2024/07/cyber-security-padlock.webp">
 					</div>
 
